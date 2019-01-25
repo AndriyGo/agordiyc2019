@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/2be2bf6b850b612f6df88b5439b4a84a1f57cb94/agordiyc2019'
+  s.homepage         = 'https://github.com/AndriyGo/agordiyc2019'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '2be2bf6b850b612f6df88b5439b4a84a1f57cb94' => 'a.gordiychuk@icloud.com' }
@@ -30,5 +30,6 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'Pod/**/*'
+  s.source_files = 'Pod/**/*.{h,m,swift,xcdatamodeld}'
+s.swift_version = '4.0'
 end
