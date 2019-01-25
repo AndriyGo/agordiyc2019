@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'agordiyc2019'
-  s.version          = '0.1.3'
+  s.version          = '0.1.4'
   s.summary          = 'A short description of agordiyc2019.'
 
 # This description is used to generate tags and improve search results.
@@ -31,5 +31,6 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'Pod/**/*.{h,m,swift,xcdatamodeld}'
+s.resources = 'Pod/article.xcdatamodeld'
 s.swift_version = '4.0'
 end
