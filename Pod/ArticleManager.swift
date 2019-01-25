@@ -34,7 +34,7 @@ final public class ArticleManager {
         }
     }
     
-    func save() {
+    public func save() {
         if !(managedObjectContext.hasChanges || privateContext.hasChanges) {
             return
         }
@@ -59,7 +59,7 @@ final public class ArticleManager {
         }
     }
     
-    func newArticle(title: String?, content: String?, language: String?, image: NSData?) {
+    public func newArticle(title: String?, content: String?, language: String?, image: NSData?) {
         let art = NSEntityDescription.entity(forEntityName: "Article",
                                              in: managedObjectContext)!
         let a = NSManagedObject(entity: art, insertInto: managedObjectContext) as! Article
@@ -73,12 +73,12 @@ final public class ArticleManager {
         save()
     }
     
-    func removeArticle(_ article: Article) {
+    public func removeArticle(_ article: Article) {
         managedObjectContext.delete(article)
         save()
     }
     
-    func getAllArticles()->[Article] {
+    public func getAllArticles()->[Article] {
         let req:NSFetchRequest<Article> = Article.fetchRequest()
         do {
             let articles = try managedObjectContext.fetch(req)
@@ -90,7 +90,7 @@ final public class ArticleManager {
         return []
     }
     
-    func getArticles(withLang lang: String)->[Article] {
+    public func getArticles(withLang lang: String)->[Article] {
         let req:NSFetchRequest<Article> = Article.fetchRequest()
         req.predicate = NSPredicate(format: "language == %@", lang)
         do {
@@ -103,7 +103,7 @@ final public class ArticleManager {
         return []
     }
     
-    func getArticles(containString str: String)->[Article] {
+    public func getArticles(containString str: String)->[Article] {
         let req:NSFetchRequest<Article> = Article.fetchRequest()
         let lang = NSPredicate(format: "language contains[c] %@", str)
         let title = NSPredicate(format: "title contains[c] %@", str)
