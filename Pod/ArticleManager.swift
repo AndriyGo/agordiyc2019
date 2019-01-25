@@ -9,7 +9,7 @@
 import Foundation
 import CoreData
 
-final class ArticleManager {
+final public class ArticleManager {
     static let shared = ArticleManager()
     var managedObjectContext:NSManagedObjectContext
     var privateContext:NSManagedObjectContext
