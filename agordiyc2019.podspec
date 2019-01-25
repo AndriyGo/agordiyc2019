@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'agordiyc2019'
-  s.version          = '0.1.4'
-  s.summary          = 'A short description of agordiyc2019.'
+  s.version          = '0.1.5'
+  s.summary          = 'I only do this because of Swift Piscine'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -17,13 +17,11 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+  s.description      = "I only do this because of Swift Piscine!!!"
 
   s.homepage         = 'https://github.com/AndriyGo/agordiyc2019'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { '2be2bf6b850b612f6df88b5439b4a84a1f57cb94' => 'a.gordiychuk@icloud.com' }
   s.source           = { :git => 'https://github.com/AndriyGo/agordiyc2019.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
@@ -33,4 +31,5 @@ TODO: Add long description of the pod here.
   s.source_files = 'Pod/**/*.{h,m,swift,xcdatamodeld}'
 s.resources = 'Pod/article.xcdatamodeld'
 s.swift_version = '4.0'
+s.framework    = 'CoreData'
 end
