@@ -59,7 +59,7 @@ final public class ArticleManager {
         }
     }
     
-    public func newArticle(title: String?, content: String?, language: String?, image: NSData?) {
+    public func newArticle(title: String?, content: String?, language: String?, image: NSData?) -> Article {
         let art = NSEntityDescription.entity(forEntityName: "Article",
                                              in: managedObjectContext)!
         let a = NSManagedObject(entity: art, insertInto: managedObjectContext) as! Article
@@ -71,6 +71,7 @@ final public class ArticleManager {
         a.modificationDate = date
         a.title = title
         save()
+        return a
     }
     
     public func removeArticle(_ article: Article) {
